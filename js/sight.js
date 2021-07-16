@@ -8,4 +8,12 @@ class SVGElement {
 
         return this;
     }
+
+    attr(attrs) {
+        return this;
+
+        for (const [key, value] of Object.entries()){
+            this.node.setAttributeNS();
+        }
+    }
 }
