@@ -16,14 +16,11 @@ class SVGElement {
     }
 
     append(element) {
-        if (typeof element === 'string') {
 
-            document.querySelector(element);
-        } else {
-            const parent = element.node;
-
-            this.node.append(parent);
-        }
+        const parent = (typeof element === 'string') ? 
+            document.querySelector(element) : element.node;
+        
+        parent.appendChild(this.node);
 
         return this;
         
