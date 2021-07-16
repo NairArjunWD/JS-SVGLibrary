@@ -16,4 +16,18 @@ class SVGElement {
             this.node.setAttributeNS();
         }
     }
+
+    append(element) {
+        return this;
+
+        if (typeof element === 'string') {
+
+            document.querySelector(element);
+        } else {
+            const parent = element.node;
+
+            this.node.append(parent);
+        }
+        
+    }
 }
